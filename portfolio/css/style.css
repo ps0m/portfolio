@@ -57,7 +57,7 @@
   }
 
 .container {
-    width: 1440px;
+    width-max: 1440px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -560,3 +560,159 @@ a:hover, a:focus, a:active {
 }
 
 /* Footer styles finish*/
+
+/* Hamburger menu finish*/
+
+.burger {
+    display: none;
+    width: 50px;
+    height: 28px;
+    position: relative;
+  }
+
+.line_burger{
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 5px;
+    margin: 0;
+    background-color: white;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .line_burger_first{
+      top: 0;
+  }
+
+  .line_burger_second{
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  .line_burger_third{
+      bottom:0;
+  } 
+
+
+.burger:hover{
+    cursor: pointer;
+  }
+
+  
+  @media screen and (max-width: 768px) {
+      
+.burger{
+     display: block;
+     }
+
+.header_nav {
+    width: 80%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: black;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: 0.8s ease-in-out;
+
+}
+.header_nav_active{
+    transform: translateX(0);
+}
+
+.header_list {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 134px;
+    padding-left: 127px;
+}
+
+.header_link {
+    font-size: 35px;
+    line-height: 73px;
+    margin: 0;
+}
+
+.nav_close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    right: 64px;
+    color: white;
+    z-index: 3;
+
+}
+
+.nav_close_line{
+    display:block; 
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top:50%;
+    background-color: #fff;
+}
+
+.nav_close_line:first-child{
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.nav_close_line:last-child{
+    transform: translateY(-50%) rotate(45deg);
+}
+
+}
+
+@media screen and (max-width: 620px) {
+
+.header_nav {
+    width: 100%;    
+}
+}
+
+    /*#hamburger-6.is-active{
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition-delay: 0.6s;
+        -o-transition-delay: 0.6s;
+        transition-delay: 0.6s;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      
+    #hamburger-6.is-active .line:nth-child(2){
+        width: 0px;
+      }
+      
+    #hamburger-6.is-active .line:nth-child(1),
+    #hamburger-6.is-active .line:nth-child(3){
+        -webkit-transition-delay: 0.3s;
+        -o-transition-delay: 0.3s;
+        transition-delay: 0.3s;
+      }
+      
+    #hamburger-6.is-active .line:nth-child(1){
+        -webkit-transform: translateY(13px);
+        -ms-transform: translateY(13px);
+        -o-transform: translateY(13px);
+        transform: translateY(13px);
+      }
+      
+    #hamburger-6.is-active .line:nth-child(3){
+        -webkit-transform: translateY(-13px) rotate(90deg);
+        -ms-transform: translateY(-13px) rotate(90deg);
+        -o-transform: translateY(-13px) rotate(90deg);
+        transform: translateY(-13px) rotate(90deg);
+      }*/
+        
+    
+    /* Hamburger menu styles finish*/
