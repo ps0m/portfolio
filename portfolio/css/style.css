@@ -93,6 +93,11 @@
     margin: 25px 20px;
 }
 
+.header_logo:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+  }
+
 .header_nav{
     margin-left: auto;
 
@@ -361,9 +366,9 @@
 .button_video:hover,
 .button_video:focus,
 .button_video:active {
-    opacity: .75;
-    color: var(--color-gold);
-    transition: 0.5s;
+    cursor: pointer;
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
 }
 
 
@@ -563,9 +568,8 @@ span a {
 }
 
 a:hover, a:focus, a:active {
-    opacity: .75;
-    color: var(--color-gold);
-    transition: 0.5s;
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
 }
 
 /* Footer styles finish*/
