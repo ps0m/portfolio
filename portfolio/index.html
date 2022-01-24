@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -36,11 +36,20 @@
                             <a href="#Contacts"     class="header_link">Contacts</a>
                         </li>
                     </ul>
+                    <div class="nav_close">
+                        <span class="nav_close_line"></span>
+                        <span class="nav_close_line"></span>
+                    </div>
                 </nav>
                 <div class="radio">
                     <input class="checkbox" type="radio" id ="en" name = "lang" value="en"> 
                     <span>/</span>
                     <input class="checkbox" type="radio" id ="ru" name = "lang" value="ru" checked>   
+                </div>
+                <div class="burger" >
+                    <span class="line_burger line_burger_first"></span>
+                    <span class="line_burger line_burger_second"></span>
+                    <span class="line_burger line_burger_third"></span>
                 </div>
             </div>
         </header>
@@ -65,8 +74,8 @@
                         </span>
                     </h2>
                 </div>
-                
-                <div class="card_skills">
+                <div class="card_skills_container">
+                    <div class="card_skills">
                         <img class="skills_icon" src="./assets/svg/camera.svg" alt="camera">
                     
                     <p class="name_skills">
@@ -103,6 +112,8 @@
                         Professional sounds recording for video, advertising, portfolio
                     </p>
                 </div>
+                </div>
+                
             </section>
 
             <section id=Portfolio class="portfolio">
@@ -120,15 +131,14 @@
                     <button type="submit" class="button_transparent">Autumn</button>
                 </div>
                 <div class="photo_container">
-                    <img src="./assets/jpg/portfolio4.jpg" alt="Photo_portfolio4" class="photo_portfolio">
-                    <img src="./assets/jpg/portfolio5.jpg" alt="Photo_portfolio5" class="photo_portfolio">
                     <img src="./assets/jpg/portfolio6.jpg" alt="Photo_portfolio6" class="photo_portfolio">
-                </div>
-                <div class="photo_container">
-                    <img src="./assets/jpg/portfolio1.jpg" alt="Photo_portfolio1" class="photo_portfolio">
-                    <img src="./assets/jpg/portfolio2.jpg" alt="Photo_portfolio2" class="photo_portfolio">
+                    <img src="./assets/jpg/portfolio5.jpg" alt="Photo_portfolio5" class="photo_portfolio">
+                    <img src="./assets/jpg/portfolio4.jpg" alt="Photo_portfolio4" class="photo_portfolio">
                     <img src="./assets/jpg/portfolio3.jpg" alt="Photo_portfolio3" class="photo_portfolio">
+                    <img src="./assets/jpg/portfolio2.jpg" alt="Photo_portfolio2" class="photo_portfolio">
+                    <img src="./assets/jpg/portfolio1.jpg" alt="Photo_portfolio1" class="photo_portfolio">
                 </div>
+                
             </section>
 
             <section id=Video class="video">
@@ -139,9 +149,7 @@
                         </span>
                     </h2>
                     <div class="video_player">
-                        <a href="/" class="video_player_link">
-                            <img src="./assets/svg/play_hover.svg" alt="video_player_hover">
-                        </a>
+                        <button type="button" class="button_video"></button>
                     </div>    
                         
                 </div>
@@ -232,7 +240,7 @@
             </section>
 
             <section id=Contacts class="contacts">
-                <div class="contacts_continer">
+                <div class="contacts_container">
                     <h2 class="contacts_title">
                         Contact me
                     </h2>
@@ -240,7 +248,6 @@
                     <input type="tel" class="enter_phone" placeholder="Phone"> 
                     <textarea class="message_contacts" name="message_contacts" id="message" cols="30" rows="10" placeholder="Message"></textarea>
                     <button type="submit" class="button_solid">Send message</button>
-                    
                 </div>
             </section>    
         </main>
@@ -254,7 +261,7 @@
                 </div>
                 <a href="https://rs.school/js-stage0/"     class="footer_link">Rolling Scopes School</a>
                 <div class="social_list">
-                    <ul class="foother_list">
+                    <ul class="footer_list">
                         <li>
                             <a href="https://www.instagram.com/alexrise_com/" class="footer_logo">
                                 <img src="./assets/svg/inst.svg" alt="Instagram">
@@ -281,5 +288,6 @@
         </footer>
     </div>
     <script src="./index.js"></script>
+
 </body>
 </html>
