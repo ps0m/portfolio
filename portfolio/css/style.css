@@ -302,7 +302,7 @@
     padding-bottom: 35px;
 }
 
-.button_transparent {
+.button_portfolio {
     width: 220px;
     height: 55px;
     margin-right: 5px;
@@ -314,13 +314,18 @@
     cursor: pointer;
 }
 
-.button_transparent:last-child {
+.button_portfolio:last-child {
     margin-right: 0;
 }
 
-.button_transparent:hover, .button_transparent:focus, .button_transparent:active {
+.button_portfolio:hover, .button_portfolio:focus, .button_portfolio:active {
     color: white;
     transition: 1s;
+}
+
+.button_portfolio_active {
+    color: #000;
+    background-color: #bdae82;
 }
 
 .photo_container {
@@ -687,11 +692,11 @@ a:hover, a:focus, a:active {
         padding: 5px 20% 35px;
     }
     
-    .button_transparent {
+    .button_portfolio {
         margin: 5px;
     }
     
-    .button_transparent:last-child {
+    .button_portfolio:last-child {
         margin-right: 5px;
     }
     
@@ -845,11 +850,11 @@ a:hover, a:focus, a:active {
         padding: 0px 155px 35px;
     }
 
-    .button_transparent{
+    .button_portfolio{
         margin: 5px 0px 0px 0px;
     }
 
-    .button_transparent:last-child{
+    .button_portfolio:last-child{
         margin-right: 0px;
     }
 
@@ -991,7 +996,7 @@ a:hover, a:focus, a:active {
         padding: 5px 15% 35px;
     }
     
-    .button_transparent{
+    .button_portfolio{
         width: 220px;
         height: 55px;
         margin-right: 5px;
@@ -1003,7 +1008,7 @@ a:hover, a:focus, a:active {
         cursor: pointer;
     }
     
-    .button_transparent:last-child{
+    .button_portfolio:last-child{
         margin-right: 5px;
     }
 }
