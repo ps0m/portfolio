@@ -32,7 +32,6 @@
     const portfolioBtn = document.querySelectorAll ('.button_portfolio');
     const portfolioImages = document.querySelectorAll ('.photo_portfolio');
 
-
     function changePhotoPortfolio (event){
         if (event.target.classList.contains ('button_portfolio')) {
             portfolioImages.forEach((img, index) => img.src = `./assets/jpg/${event.target.dataset.season}/${index+1}.jpg`);
@@ -48,6 +47,14 @@
 
     portfolioBtn.forEach((el) => el.addEventListener('click', changePhotoPortfolio));
     portfolioBtn.forEach((el) => el.addEventListener('click', addActiveButton ));
-              
+    
+    function preLoadImages () {
+        for (let i=1; i<=6; i++) {
+            const img = new Image ();
+            portfolioBtn.forEach((item) => img.src= `./assets/jpg/${item.dataset.season}/${i}.jpg`);
+        }
+    }
+    preLoadImages ();
+
 }());
 
