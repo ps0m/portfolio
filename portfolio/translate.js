@@ -96,3 +96,4 @@ const i18Obj = {
 }
 
 export default i18Obj;
+

@@ -2,29 +2,30 @@ import i18Obj from './translate.js';
 
 
 const allText = document.querySelectorAll("[data-i18]");
- const allPlaceholder = document.querySelectorAll("[placeholder]");
-// const enLang = document.getElementById('en');
-// const ruLang = 'ru';
+const enLang = document.getElementById('en');
+const ruLang = document.getElementById('ru');
+
+// console.log (enLang);
 
  
 
-function getTranslate(lang) {
+function getTranslate(event) {
   allText.forEach((e) => {
-    if (e.placeholder) {
-        e.placeholder = i18Obj.ru[e.dataset.i18];
-    } else 
+    // if (e.placeholder) {
+    //     e.placeholder = i18Obj.[e.dataset.i18];
+    // } else 
     e.textContent = i18Obj.ru[e.dataset.i18];
     console.log(e.textContent);
   })
 }
 getTranslate ();
 
-// enLang.addEventListener('click', translate('en'));
-//  ruLang.addEventListener('click', translate('ru'));
+enLang.addEventListener('click', getTranslate);
+ruLang.addEventListener('click', getTranslate);
 
+// enLang.addEventListener('click', () => {console.log('en')} );
+// ruLang.addEventListener('click', () => {console.log('ru')});
 
-
-    // console.log (i1180bj.ru.skills);
 
 // function for Burger menu 
 
