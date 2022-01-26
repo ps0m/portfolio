@@ -1,30 +1,43 @@
+import i1180bj from './js/translate';
 
-// function for Burger menu 
+console.log (i18Obj);
 
-(function() {
+// // function getTranslate () {
+// //     console.log('allText');
+// //     // dataset.i18
+// //     // .forEach((item) => item.dataset.season
+// // }
+
+
+
+// // getTranslate ();
+
+// // function for Burger menu 
+
+// (function() {
     
-    const clickBurger = document.querySelector('.burger');
-    const menu = document.querySelector('.header_nav');
-    const clickCross = document.querySelector ('.nav_close');
-    const navLinks = document.querySelectorAll ('.header_link');
-    const lineBurger = document.querySelectorAll ('.line_burger');
+//     const clickBurger = document.querySelector('.burger');
+//     const menu = document.querySelector('.header_nav');
+//     const clickCross = document.querySelector ('.nav_close');
+//     const navLinks = document.querySelectorAll ('.header_link');
+//     const lineBurger = document.querySelectorAll ('.line_burger');
 
-    function closeMenu (event) {
-        if (!event.target.classList.contains ('header_nav_active')){
-            menu.classList.toggle('header_nav_active');
-            lineBurger[0].classList.toggle ('line_burger_first_cress');
-            lineBurger[1].classList.toggle ('line_burger_second_cress');
-            lineBurger[2].classList.toggle ('line_burger_third_cress');
-        };
-    }
+//     function closeMenu (event) {
+//         if (!event.target.classList.contains ('header_nav_active')){
+//             menu.classList.toggle('header_nav_active');
+//             lineBurger[0].classList.toggle ('line_burger_first_cress');
+//             lineBurger[1].classList.toggle ('line_burger_second_cress');
+//             lineBurger[2].classList.toggle ('line_burger_third_cress');
+//         };
+//     }
 
-    clickBurger.addEventListener('click', closeMenu);
+//     clickBurger.addEventListener('click', closeMenu);
 
-    clickCross.addEventListener ('click',closeMenu);
+//     clickCross.addEventListener ('click',closeMenu);
 
-    navLinks.forEach((el) => el.addEventListener('click', closeMenu ));
+//     navLinks.forEach((el) => el.addEventListener('click', closeMenu ));
        
-}());
+// }());
 
 // function for change Portfolio
 
@@ -57,4 +70,8 @@
     preLoadImages ();
 
 }());
+
+
+
+
 
