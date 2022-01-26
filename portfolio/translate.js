@@ -20,6 +20,9 @@ const i18Obj = {
     'spring': 'Spring',
     'summer': 'Summer',
     'autumn': 'Autumn',
+    'standard': 'Standard',
+    'premium': 'Premium',
+    'gold': 'Gold',         
     'price-description-1-span-1': 'One location',
     'price-description-1-span-2': '120 photos in color',
     'price-description-1-span-3': '12 photos in retouch',
@@ -37,7 +40,11 @@ const i18Obj = {
     'price-description-3-span-5': 'Make up, visage, hairstyle',
     'order': 'Order shooting',
     'contact-me': 'Contact me',
-    'send-message': 'Send message'
+    'send-message': 'Send message',
+    'email': 'E-mail',
+    'phone': 'Phone',
+    'message': 'Message',
+
   },
   'ru': {
     'skills': 'Навыки',
@@ -60,6 +67,9 @@ const i18Obj = {
     'spring': 'Весна',
     'summer': 'Лето',
     'autumn': 'Осень',
+    'standard': 'Стандарт',
+    'premium': 'Премиуим',
+    'gold': 'Золотой',
     'price-description-1-span-1': 'Одна локация',
     'price-description-1-span-2': '120 цветных фото',
     'price-description-1-span-3': '12 отретушированных фото',
@@ -77,7 +87,11 @@ const i18Obj = {
     'price-description-3-span-5': 'Макияж, визаж, прическа',
     'order': 'Заказать съемку',
     'contact-me': 'Свяжитесь со мной',
-    'send-message': 'Отправить'
+    'send-message': 'Отправить',
+    'email': 'Электронная почта',
+    'phone': 'Телефон',
+    'message': 'Сообщение',
+
   }
 }
 

@@ -1,20 +1,24 @@
 import i18Obj from './translate.js';
 
 
-const langArr = document.querySelectorAll("[data-i18]");
+const allText = document.querySelectorAll("[data-i18]");
+ const allPlaceholder = document.querySelectorAll("[placeholder]");
 // const enLang = document.getElementById('en');
 // const ruLang = 'ru';
 
  
 
-function translate(lang) {
-  langArr.forEach((e) => {
-    e.innerHTML = i18Obj.ru[e.dataset.i18];
-    e.classList.lengt; 
+function getTranslate(lang) {
+  allText.forEach((e) => {
+    if (e.placeholder) {
+        e.placeholder = i18Obj.ru[e.dataset.i18];
+    } else 
+    e.textContent = i18Obj.ru[e.dataset.i18];
     console.log(e.textContent);
   })
 }
-translate ();
+getTranslate ();
+
 // enLang.addEventListener('click', translate('en'));
 //  ruLang.addEventListener('click', translate('ru'));
 
