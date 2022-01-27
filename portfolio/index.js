@@ -1,30 +1,39 @@
 import i18Obj from './translate.js';
 
+// let lang = 'en';
+
+// function setLocalStorage() {
+//   localStorage.setItem('lang', lang);
+//   }
+//   window.addEventListener('beforeunload', setLocalStorage)
+
+// function getLocalStorage() {
+//     if(localStorage.getItem('lang')) {
+//       const lang = localStorage.getItem('lang');
+//       getTranslate(lang);
+//   } 
+// }
+//   window.addEventListener('load', getLocalStorage)
+  
+  
+// function Translate text 
 
 const allText = document.querySelectorAll("[data-i18]");
-const enLang = document.getElementById('en');
-const ruLang = document.getElementById('ru');
+const readLanguage = document.querySelectorAll('input[name="lang"]');
 
-// console.log (enLang);
+if (readLanguage) {
+    readLanguage.forEach((elem) => {
+      elem.addEventListener("change", function(event) {
+        var item = event.target.value;
+        allText.forEach((n) => {
+            if (n.placeholder) {
+                n.placeholder = i18Obj[item][n.dataset.i18];
+                } else 
+            n.textContent = i18Obj[item][n.dataset.i18]});
+      });
+    });
+  }
 
- 
-
-function getTranslate(event) {
-  allText.forEach((e) => {
-    // if (e.placeholder) {
-    //     e.placeholder = i18Obj.[e.dataset.i18];
-    // } else 
-    e.textContent = i18Obj.ru[e.dataset.i18];
-    console.log(e.textContent);
-  })
-}
-getTranslate ();
-
-enLang.addEventListener('click', getTranslate);
-ruLang.addEventListener('click', getTranslate);
-
-// enLang.addEventListener('click', () => {console.log('en')} );
-// ruLang.addEventListener('click', () => {console.log('ru')});
 
 
 // function for Burger menu 
@@ -85,8 +94,6 @@ ruLang.addEventListener('click', getTranslate);
     preLoadImages ();
 
 }());
-
-
 
 
 
