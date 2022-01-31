@@ -1,45 +1,63 @@
-/* merriweather-700 - latin_cyrillic */
-@font-face {
-    font-family: 'Merriweather';
-    font-style: normal;
-    font-weight: 700;
-    src: local(''),
-         url('../fonts/merriweather-v28-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/merriweather-v28-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* merriweather-regular - latin */
+/* merriweather-regular - latin_cyrillic */
 @font-face {
     font-family: 'Merriweather';
     font-style: normal;
     font-weight: 400;
+    src: url('../fonts/merriweather-v28-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
     src: local(''),
-         url('../fonts/merriweather-v28-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/merriweather-v28-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('../fonts/merriweather-v28-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/merriweather-v28-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/merriweather-v28-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/merriweather-v28-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/merriweather-v28-latin_cyrillic-regular.svg#Merriweather') format('svg'); /* Legacy iOS */
   }
-  /* inter-regular - latin */
+  /* merriweather-700 - latin_cyrillic */
+  @font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/merriweather-v28-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/merriweather-v28-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/merriweather-v28-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/merriweather-v28-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/merriweather-v28-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/merriweather-v28-latin_cyrillic-700.svg#Merriweather') format('svg'); /* Legacy iOS */
+  }
+  /* inter-regular - latin_cyrillic */
 @font-face {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
+    src: url('../fonts/inter-v7-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
     src: local(''),
-         url('../fonts/inter-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/inter-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('../fonts/inter-v7-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/inter-v7-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/inter-v7-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/inter-v7-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/inter-v7-latin_cyrillic-regular.svg#Inter') format('svg'); /* Legacy iOS */
   }
-  /* inter-700 - latin */
+  /* inter-700 - latin_cyrillic */
   @font-face {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
+    src: url('../fonts/inter-v7-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
     src: local(''),
-         url('../fonts/inter-v7-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/inter-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('../fonts/inter-v7-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/inter-v7-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/inter-v7-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/inter-v7-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/inter-v7-latin_cyrillic-700.svg#Inter') format('svg'); /* Legacy iOS */
   }
 
   :root {
     --color-gold: #bdae82;
-    --color-white: #fff;
     --font1: 60px;
     --font2: 20px;
+    --body-color: #000;
+    --text-color: #fff;
+    --hover-color: #fff;
   }
 
   html {
@@ -59,8 +77,8 @@
     font-size: var(--font2);
     line-height: 2;
     font-weight: normal;
-    color: var(--color-white);
-    background-color: black;
+    color: var(--text-color);
+    background-color: var(--body-color);
   }
 
 .container {
@@ -133,15 +151,15 @@
 }
 
 .radio {
-    margin: 20px 20px 20px 29px;
+    margin: 20px 10px 20px 10px;
+    color: #fff;
 }
 
 .radio input {
-    margin: 0 3px;
-    color: var(--color-white);
     font-size: 20px;
     line-height: 50px;
     font-weight: 700;
+    color: #fff;
     cursor: pointer;
 	appearance: none;
 }
@@ -153,6 +171,35 @@
 .radio input:before {
 	content: attr(id);
 }
+
+.theme {
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+    color: var(--color-gold); 
+ }
+
+ .theme:hover,
+ .theme:focus,
+ .theme:active {
+     opacity: .75;
+     color: var(--color-gold);
+     transition: 0.5s;
+    }
+    
+    .theme-dark {
+        background: url(../assets/svg/day.svg);
+    }
+
+.theme-light {
+    background: url(../assets/svg/night.svg);
+ }
+
+
+
+
+
+
 
 /* Header styles start*/
 
@@ -179,32 +226,69 @@
     font-size: var(--font1);
     font-weight: 700;
     line-height: 2;
+    color: #fff;
 }
 
 .hero_subtitle{
     margin: 0;
     padding-bottom: 25px;
+    color: #fff;
 }
 
 .button_solid{
     height: 55px;
     width: 220px;
+    position: relative;
     margin: 0 auto;
     font-family: inherit;
     font-size: 20px;
-    color: black;
+    color: #000;
     background-color: var(--color-gold);
     border: none;
     cursor: pointer;
 }
 
+
 .button_solid:hover,
 .button_solid:focus,
 .button_solid:active {
-    color: white;
+    color: #fff;
     transition: 1s;
     outline: 0 none;
+
 }
+
+/* button {
+    background-color: purple;
+    color: #fff;
+    border: 1px purple solid;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative;
+  }
+   */
+ 
+  
+   .button_solid .circle {
+    position: absolute;
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+  }
+  
+  @keyframes scale {
+    to {
+      transform: translate(-50%, -50%) scale(3);
+      opacity: 0;
+    }
+  }
 
 /* Hero styles finish*/
 
@@ -302,7 +386,7 @@
     padding-bottom: 35px;
 }
 
-.button_transparent {
+.button_portfolio {
     width: 220px;
     height: 55px;
     margin-right: 5px;
@@ -314,13 +398,18 @@
     cursor: pointer;
 }
 
-.button_transparent:last-child {
+.button_portfolio:last-child {
     margin-right: 0;
 }
 
-.button_transparent:hover, .button_transparent:focus, .button_transparent:active {
-    color: white;
+.button_portfolio:hover, .button_portfolio:focus, .button_portfolio:active {
+    color: var(--hover-color);
     transition: 1s;
+}
+
+.button_portfolio_active {
+    color: var(--text-color);
+    background-color: #bdae82;
 }
 
 .photo_container {
@@ -369,6 +458,8 @@
     cursor: pointer;
     filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
+    transition: 1s;
+
 }
 
 
@@ -547,7 +638,6 @@ textarea {
     display: flex;
     justify-content: center;
     height: 32px;
-    /*padding-left: 40px;*/
     padding-left: 20px;
 }
 
@@ -555,7 +645,7 @@ span a {
     padding-left: 0px;
     font-size: 20px;
     line-height: 50px;
-    color: #FFFFFF;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -563,8 +653,20 @@ span a {
     padding-left: 80px;
     font-size: 20px;
     line-height: 50px;
-    color: #FFFFFF;
+    color: var(--text-color);
     text-decoration: none;
+}
+
+.footer_logo {
+    display: block;
+}
+
+.footer_logo_dark {
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(52deg) brightness(100%) contrast(103%);
+}
+
+.footer_logo_light {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(52deg) brightness(100%) contrast(103%);
 }
 
 a:hover, a:focus, a:active {
@@ -581,7 +683,7 @@ a:hover, a:focus, a:active {
     width: 50px;
     height: 28px;
     position: relative;
-    margin: 31px 64px 31px 0;
+    margin: 31px 15px 31px 0;
   }
 
 .line_burger {
@@ -636,6 +738,8 @@ a:hover, a:focus, a:active {
     transition: all 0.3s ease-in-out;
 }    
 
+
+
 /* Burger menu styles finish*/
 
 @media screen and (max-width: 1400px) {
@@ -687,11 +791,11 @@ a:hover, a:focus, a:active {
         padding: 5px 20% 35px;
     }
     
-    .button_transparent {
+    .button_portfolio {
         margin: 5px;
     }
     
-    .button_transparent:last-child {
+    .button_portfolio:last-child {
         margin-right: 5px;
     }
     
@@ -715,7 +819,6 @@ a:hover, a:focus, a:active {
 
     :root {
         --color-gold: #bdae82;
-        --color-white: #fff;
         --font1: 32px;
         --font2: 20px;
         }
@@ -845,11 +948,11 @@ a:hover, a:focus, a:active {
         padding: 0px 155px 35px;
     }
 
-    .button_transparent{
+    .button_portfolio{
         margin: 5px 0px 0px 0px;
     }
 
-    .button_transparent:last-child{
+    .button_portfolio:last-child{
         margin-right: 0px;
     }
 
@@ -991,7 +1094,7 @@ a:hover, a:focus, a:active {
         padding: 5px 15% 35px;
     }
     
-    .button_transparent{
+    .button_portfolio{
         width: 220px;
         height: 55px;
         margin-right: 5px;
@@ -1003,7 +1106,7 @@ a:hover, a:focus, a:active {
         cursor: pointer;
     }
     
-    .button_transparent:last-child{
+    .button_portfolio:last-child{
         margin-right: 5px;
     }
 }
@@ -1022,12 +1125,16 @@ a:hover, a:focus, a:active {
         height: 40px;
         margin: 25px 0 25px 20px;
         }
+    .theme {
+        margin: 0 5px;
+     }    
+        
+        
         
     .burger {
         width: 50px;
         height: 28px;
         position: relative;
-        margin: 31px 31px 31px 0;
         }
     
     .h2_line {
@@ -1045,7 +1152,7 @@ a:hover, a:focus, a:active {
         }
     
     .price_block {
-        width: 300px;
+        width: 280px;
         height: 505px;
         margin-bottom: 50px;
         }
@@ -1062,7 +1169,7 @@ a:hover, a:focus, a:active {
     
     input[type="email"], input[type="tel"], textarea {
         display: block;
-        width: 300px;
+        width: 280px;
         height: 50px;
         margin: 20px auto;
         }
