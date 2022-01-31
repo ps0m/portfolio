@@ -53,9 +53,11 @@
 
   :root {
     --color-gold: #bdae82;
-    --color-white: #fff;
     --font1: 60px;
     --font2: 20px;
+    --body-color: #000;
+    --text-color: #fff;
+    --hover-color: #fff;
   }
 
   html {
@@ -75,8 +77,8 @@
     font-size: var(--font2);
     line-height: 2;
     font-weight: normal;
-    color: var(--color-white);
-    background-color: black;
+    color: var(--text-color);
+    background-color: var(--body-color);
   }
 
 .container {
@@ -149,12 +151,11 @@
 }
 
 .radio {
-    margin: 20px 20px 20px 29px;
+    margin: 20px 10px 20px 10px;
 }
 
 .radio input {
-    margin: 0 3px;
-    color: var(--color-white);
+    color: var(--text-color);
     font-size: 20px;
     line-height: 50px;
     font-weight: 700;
@@ -169,6 +170,35 @@
 .radio input:before {
 	content: attr(id);
 }
+
+.theme {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    color: var(--color-gold); 
+ }
+
+ .theme:hover,
+ .theme:focus,
+ .theme:active {
+     opacity: .75;
+     color: var(--color-gold);
+     transition: 0.5s;
+    }
+    
+    .theme-dark {
+        background: url(../assets/svg/day.svg);
+    }
+
+.theme-light {
+    background: url(../assets/svg/night.svg);
+ }
+
+
+
+
+
+
 
 /* Header styles start*/
 
@@ -195,11 +225,13 @@
     font-size: var(--font1);
     font-weight: 700;
     line-height: 2;
+    color: #fff;
 }
 
 .hero_subtitle{
     margin: 0;
     padding-bottom: 25px;
+    color: #fff;
 }
 
 .button_solid{
@@ -208,7 +240,7 @@
     margin: 0 auto;
     font-family: inherit;
     font-size: 20px;
-    color: black;
+    color: #000;
     background-color: var(--color-gold);
     border: none;
     cursor: pointer;
@@ -217,9 +249,10 @@
 .button_solid:hover,
 .button_solid:focus,
 .button_solid:active {
-    color: white;
+    color: var(--hover-color);
     transition: 1s;
     outline: 0 none;
+
 }
 
 /* Hero styles finish*/
@@ -335,12 +368,12 @@
 }
 
 .button_portfolio:hover, .button_portfolio:focus, .button_portfolio:active {
-    color: white;
+    color: var(--hover-color);
     transition: 1s;
 }
 
 .button_portfolio_active {
-    color: #000;
+    color: var(--text-color);
     background-color: #bdae82;
 }
 
@@ -390,6 +423,8 @@
     cursor: pointer;
     filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
+    transition: 1s;
+
 }
 
 
@@ -602,7 +637,7 @@ a:hover, a:focus, a:active {
     width: 50px;
     height: 28px;
     position: relative;
-    margin: 31px 64px 31px 0;
+    margin: 31px 15px 31px 0;
   }
 
 .line_burger {
@@ -736,7 +771,6 @@ a:hover, a:focus, a:active {
 
     :root {
         --color-gold: #bdae82;
-        --color-white: #fff;
         --font1: 32px;
         --font2: 20px;
         }
@@ -1048,7 +1082,6 @@ a:hover, a:focus, a:active {
         width: 50px;
         height: 28px;
         position: relative;
-        margin: 31px 31px 31px 0;
         }
     
     .h2_line {
@@ -1066,7 +1099,7 @@ a:hover, a:focus, a:active {
         }
     
     .price_block {
-        width: 300px;
+        width: 280px;
         height: 505px;
         margin-bottom: 50px;
         }
@@ -1083,7 +1116,7 @@ a:hover, a:focus, a:active {
     
     input[type="email"], input[type="tel"], textarea {
         display: block;
-        width: 300px;
+        width: 280px;
         height: 50px;
         margin: 20px auto;
         }

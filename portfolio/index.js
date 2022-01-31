@@ -35,7 +35,26 @@ if (readLanguage) {
   }
 
 
+// function change theme
 
+(function() {
+    const clickTheme = document.querySelector('.theme');
+    const clickLightTheme = document.querySelector('.light-dark');
+    function changeTheme (event) {
+        if (event.target.classList.contains ('theme')){
+            clickTheme.classList.toggle('theme-light');
+            clickTheme.classList.toggle('theme-dark');
+            document.documentElement.style.setProperty('--body-color', '#fff');
+            // document.documentElement.style.setProperty('--body-color', "");
+            document.documentElement.style.setProperty('--text-color', '#000');
+            // document.documentElement.style.setProperty('--hover-color', '#000');
+        };
+    } 
+    clickTheme.addEventListener('click', changeTheme);
+    // clickLightTheme.addEventListener('click', changeTheme);
+
+
+}());
 // function for Burger menu 
 
 (function() {
