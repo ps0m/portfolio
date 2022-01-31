@@ -37,21 +37,36 @@ if (readLanguage) {
 
 // function change theme
 
+
+
 (function() {
     const clickTheme = document.querySelector('.theme');
-    const clickLightTheme = document.querySelector('.light-dark');
+    const logoFooter = document.querySelectorAll('.footer_logo');
+    let a;
+    function toggleMe(){
+      return () => a = !a;
+    }
     function changeTheme (event) {
         if (event.target.classList.contains ('theme')){
             clickTheme.classList.toggle('theme-light');
             clickTheme.classList.toggle('theme-dark');
+            logoFooter.forEach((el) => {
+                el.classList.toggle('footer_logo_dark');
+                el.classList.toggle('footer_logo_light')});
+            
+            const b = toggleMe();
+            if (b()) {
             document.documentElement.style.setProperty('--body-color', '#fff');
-            // document.documentElement.style.setProperty('--body-color', "");
             document.documentElement.style.setProperty('--text-color', '#000');
-            // document.documentElement.style.setProperty('--hover-color', '#000');
+            document.documentElement.style.setProperty('--hover-color', '#000');
+            } else {
+               document.documentElement.style.setProperty('--body-color', ""); 
+               document.documentElement.style.setProperty('--text-color', ""); 
+               document.documentElement.style.setProperty('--hover-color', ""); 
+            }
         };
     } 
     clickTheme.addEventListener('click', changeTheme);
-    // clickLightTheme.addEventListener('click', changeTheme);
 
 
 }());
@@ -104,15 +119,38 @@ if (readLanguage) {
     portfolioBtn.forEach((el) => el.addEventListener('click', changePhotoPortfolio));
     portfolioBtn.forEach((el) => el.addEventListener('click', addActiveButton ));
     
-    function preLoadImages () {
-        for (let i=1; i<=6; i++) {
-            const img = new Image ();
-            portfolioBtn.forEach((item) => img.src= `./assets/jpg/${item.dataset.season}/${i}.jpg`);
-        }
-    }
-    preLoadImages ();
-
 }());
+
+// function difficult Button
+
+const button = document.querySelectorAll('.button_solid');
+
+// button.addEventListener('click', function (e) {
+button.forEach((el) => el.addEventListener('click', e));
+function e (event) {
+if (event.target.classList.contains ('button_solid')) { 
+  const x = e.clientX
+  const y = e.clientY
+
+  const buttonTop = e.offsetTop
+  const buttonLeft = e.offsetLeft
+
+  const xInside = x - buttonLeft
+  const yInside = y - buttonTop
+
+  const circle = document.createElement('span')
+  circle.classList.add('circle')
+  circle.style.top = yInside + 'px'
+  circle.style.left = xInside + 'px'
+
+  this.appendChild(circle)
+
+  setTimeout(() => circle.remove(), 500)
+}};
+
+
+
+
 
 
 
