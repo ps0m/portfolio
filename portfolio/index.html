@@ -148,16 +148,18 @@
                             Video
                         </span>
                     </h2>
-                    <div class="video_player">
-                        <video src="./assets/video/video.mp4" preload="metadata" poster="./assets/jpg/video-player.jpg"></video>
+                    <div class="video_container">
+                        <div class="item_div"></div>
+                        <video src="./assets/video/video.mp4" class="video" preload="metadata" poster="./assets/jpg/video-player.jpg" ></video>
                         <button type="button" class="button_video"></button>
                         <div class="player_controls">
-                            <button class="button_controls toggle">▷</button>
-                            <div class="progress_full">
-                                <div class="progress_field"></div>
+                            <input type="range" name="progress_full" class="progress_full" min="0" max="100" step="0.1" value="0">
+                            <div class="container_play">
+                                <button class="button_controls toggle">▷</button>
+                                <div class="time_video_player">00:00</div>
+                                <button class="button_volume">🕪</button>
+                                <input type="range" name="volume" class="volume_range" min="0" max="1" step="0.05" value="0.6">
                             </div>
-                            <button class="button_volume">🕩</button>
-                            <input type="range" name="volume" class="volume_range" min="0" max="1" step="0.05" value="1">
                             <button class="button_fullscreen">⬚</button>
                         </div>
                     </div>    
