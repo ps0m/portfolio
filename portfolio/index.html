@@ -40,9 +40,9 @@
                     </div>
                 </nav>
                 <div class="radio">
-                    <input class="checkbox" type="radio" id ="en" name = "lang" value="en" checked > 
+                    <input class="checkbox" type="radio" id ="EN" name = "lang" value="en" checked > 
                     <span>/</span>
-                    <input class="checkbox" type="radio" id ="ru" name = "lang" value="ru" >   
+                    <input class="checkbox" type="radio" id ="RU" name = "lang" value="ru" >   
                 </div>
                 <div class="theme theme-dark">
                     
@@ -141,15 +141,27 @@
                 </div>
             </section>
 
-            <section id=Video class="video">
+            <section id=Video class="video_section">
                 <div class="h2_container">
                     <h2 class="h2_line" data-i18="video">
                         <span>                        
                             Video
                         </span>
                     </h2>
-                    <div class="video_player">
+                    <div class="video_container">
+                        <div class="item_div"></div>
+                        <video src="./assets/video/video.mp4" class="video" preload="metadata" poster="./assets/jpg/video-player.jpg" ></video>
                         <button type="button" class="button_video"></button>
+                        <div class="player_controls">
+                            <input type="range" name="progress_full" class="progress_full" min="0" max="100" step="0.1" value="0">
+                            <div class="container_play">
+                                <button class="button_controls toggle">▷</button>
+                                <div class="time_video_player">00:00</div>
+                                <button class="button_volume">🕪</button>
+                                <input type="range" name="volume" class="volume_range" min="0" max="1" step="0.05" value="0.6">
+                            </div>
+                            <button class="button_fullscreen">⬚</button>
+                        </div>
                     </div>    
                 </div>
             </section>
