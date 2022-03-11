@@ -1,0 +1,289 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./assets/png/favicon.png" type="image/x-icon">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header"> 
+            <div class="header_container">
+                <div class="header_logo">
+                    <a href="#" class="header_logo_link">
+                        <img src="./assets/svg/logo.svg" alt="logo">
+                    </a>
+                </div>
+
+                <nav class="header_nav">
+                    <ul class="header_list">
+                        <li class="heder_item">
+                            <a href="#Skills"     class="header_link">Skills</a>
+                        </li>
+                        <li class="heder_item">
+                            <a href="#Portfolio"     class="header_link">Portfolio</a>
+                        </li>
+                        <li class="heder_item">
+                            <a href="#Video"     class="header_link">Video</a>
+                        </li>
+                        <li class="heder_item">
+                            <a href="#Price"     class="header_link">Price</a>
+                        </li>
+                        <li class="heder_item">
+                            <a href="#Contacts"     class="header_link">Contacts</a>
+                        </li>
+                    </ul>
+                    <div class="nav_close">
+                    </div>
+                </nav>
+                <div class="radio">
+                    <input class="checkbox" type="radio" id ="en" name = "lang" value="en"> 
+                    <span>/</span>
+                    <input class="checkbox" type="radio" id ="ru" name = "lang" value="ru" checked>   
+                </div>
+                <div class="burger" >
+                    <span class="line_burger line_burger_first"></span>
+                    <span class="line_burger line_burger_second"></span>
+                    <span class="line_burger line_burger_third"></span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="hero">
+                <div class="hero_container">
+                    <h1 class="hero_title">Alexa Rise</h1>
+                    <p class="hero_subtitle">Save sincere emotions,
+                        romantic feelings and happy moments of life
+                        together with professional photographer Alexa Rise
+                    </p>
+                    <button type="submit" class="button_solid">Hire me</button>
+                </div>
+            </section>
+
+            <section id=Skills class="skills">
+                <div class="h2_container">
+                    <h2 class="h2_line">
+                        <span>                        
+                            Skills
+                        </span>
+                    </h2>
+                </div>
+                <div class="card_skills_container">
+                    <div class="card_skills">
+                        <img class="skills_icon" src="./assets/svg/camera.svg" alt="camera">
+                    
+                    <p class="name_skills">
+                        Digital photography
+                    </p>
+                    <p class="item_skills">
+                        High-quality photos in the studio and on the nature
+                    </p>
+                </div>
+                <div class="card_skills">
+                    <img class="skills_icon" src="./assets/svg/video.svg" alt="video">
+                    <p class="name_skills">
+                        Video shooting
+                    </p>
+                    <p class="item_skills">
+                        Capture your moments so that they always stay with you
+                    </p>
+                </div>
+                <div class="card_skills">
+                    <img class="skills_icon" src="./assets/svg/retouch.svg" alt="retouch">
+                    <p class="name_skills">
+                        Retouch
+                    </p>
+                    <p class="item_skills">
+                        I strive to make photography surpass reality
+                    </p>
+                </div>
+                <div class="card_skills">
+                    <img class="skills_icon" src="./assets/svg/mic.svg" alt="microphone">
+                    <p class="name_skills">
+                        Audio
+                    </p>
+                    <p class="item_skills">
+                        Professional sounds recording for video, advertising, portfolio
+                    </p>
+                </div>
+                </div>
+                
+            </section>
+
+            <section id=Portfolio class="portfolio">
+                <div class="h2_container">
+                    <h2 class="h2_line">
+                        <span>                        
+                            Portfolio
+                        </span>
+                    </h2>
+                </div>
+                <div class="group_button">
+                    <button type="submit" class="button_transparent">Winter</button>
+                    <button type="submit" class="button_transparent">Spring</button>
+                    <button type="submit" class="button_transparent">Summer</button>
+                    <button type="submit" class="button_transparent">Autumn</button>
+                </div>
+                <div class="photo_container">
+                    <img src="./assets/jpg/portfolio6.jpg" alt="Photo_portfolio6" class="photo_portfolio">
+                    <img src="./assets/jpg/portfolio5.jpg" alt="Photo_portfolio5" class="photo_portfolio">
+                    <img src="./assets/jpg/portfolio4.jpg" alt="Photo_portfolio4" class="photo_portfolio">
+                    <img src="./assets/jpg/portfolio3.jpg" alt="Photo_portfolio3" class="photo_portfolio">
+                    <img src="./assets/jpg/portfolio2.jpg" alt="Photo_portfolio2" class="photo_portfolio">
+                    <img src="./assets/jpg/portfolio1.jpg" alt="Photo_portfolio1" class="photo_portfolio">
+                </div>
+            </section>
+
+            <section id=Video class="video">
+                <div class="h2_container">
+                    <h2 class="h2_line">
+                        <span>                        
+                            Video
+                        </span>
+                    </h2>
+                    <div class="video_player">
+                        <button type="button" class="button_video"></button>
+                    </div>    
+                </div>
+            </section>
+
+            <section id=Price class="price">
+                <div class="h2_container">
+                    <h2 class="h2_line">
+                        <span>                        
+                            Price
+                        </span>
+                    </h2>
+                </div>
+                    <div class="price_container">
+                        <div class="price_block">
+                            <span class="price_title">
+                                Standard
+                            </span>
+                            <span class="price_value">
+                                500 $
+                            </span>
+                            <span class="price_description">
+                                One location
+                            </span>
+                            <span class="price_description">
+                                120 photos in color
+                            </span>
+                            <span class="price_description">
+                                12 photos in retouch
+                            </span>
+                            <span class="price_description">
+                                Readiness 2-3 weeks
+                            </span>
+                            <span class="price_description">
+                                Make up, visage
+                            </span>
+                            <button type="submit" class="button_solid">Order shooting</button>
+                        </div>
+                        <div class="price_block">
+                            <span class="price_title">
+                                Premium
+                            </span>
+                            <span class="price_value">
+                                700 $
+                            </span>
+                            <span class="price_description">
+                                One or two locations
+                            </span>
+                            <span class="price_description">
+                                200 photos in color
+                            </span>
+                            <span class="price_description">
+                                20 photos in retouch
+                            </span>
+                            <span class="price_description">
+                                Readiness 1-2 weeks
+                            </span>
+                            <span class="price_description">
+                                Make up, visage
+                            </span>
+                            <button type="submit" class="button_solid">Order shooting</button>
+                        </div>
+                        <div class="price_block">
+                            <span class="price_title">
+                                Gold
+                            </span>
+                            <span class="price_value">
+                                1000 $
+                            </span>
+                            <span class="price_description">
+                                Three locations or more
+                            </span>
+                            <span class="price_description">
+                                300 photos in color
+                            </span>
+                            <span class="price_description">
+                                50 photos in retouch
+                            </span>
+                            <span class="price_description">
+                                Readiness 1 week
+                            </span>
+                            <span class="price_description">
+                                Make up, visage, hairstyle
+                            </span>
+                            <button type="submit" class="button_solid">Order shooting</button>
+                        </div>
+                    </div>
+            </section>
+
+            <section id=Contacts class="contacts">
+                <div class="contacts_container">
+                    <h2 class="contacts_title">
+                        Contact me
+                    </h2>
+                    <input type="email" class="enter_email" placeholder="E-mail"> 
+                    <input type="tel" class="enter_phone" placeholder="Phone"> 
+                    <textarea class="message_contacts" name="message_contacts" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                    <button type="submit" class="button_solid">Send message</button>
+                </div>
+            </section>    
+        </main>
+        
+        <footer class="footer">
+            <div class="footer_container">
+                <div class="footer_data">
+                    <span>©</span>
+                    <span>2022</span>
+                    <span><a href="https://github.com/ps0m">github</a></span>
+                </div>
+                <a href="https://rs.school/js-stage0/"     class="footer_link">Rolling Scopes School</a>
+                <div class="social_list">
+                    <ul class="footer_list">
+                        <li>
+                            <a href="https://www.instagram.com/alexrise_com/" class="footer_logo">
+                                <img src="./assets/svg/inst.svg" alt="Instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/AlexRiseOfficial/" class="footer_logo">
+                                <img src="./assets/svg/fb.svg" alt="Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.pinterest.com/alexrise777/_saved/" class="footer_logo">
+                                <img src="./assets/svg/tw.svg" alt="Twitter">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/alex_rise" class="footer_logo_last">
+                                <img src="./assets/svg/pinterest.svg" alt="Pinterest">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./index.js"></script>
+
+</body>
+</html>
