@@ -508,7 +508,7 @@ padding-top: 46.1%;
 .button_fullscreen:hover,
 .button_fullscreen:focus,
 .button_fullscreen:active {
-    color: var(--hover-color);
+    color: #fff;
     cursor: pointer;
     transition: 1s ease;
 }

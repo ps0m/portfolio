@@ -215,6 +215,16 @@ function progressVideo () {
 }
 progressFull.addEventListener ('change', progressVideo)
 
+function preloadImages(...season) {
+    for (const item of season) {
+        for(let i = 1; i <= 6; i++) {
+        const img = new Image();
+        img.src = `./assets/jpg/${item}/${i}.jpg`;
+        }
+    }
+  }
+preloadImages('summer','winter', 'spring');
+
 console.log(`
 Ваша отметка - 65 балла(ов)
 Вёрстка +10
