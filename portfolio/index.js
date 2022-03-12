@@ -5,55 +5,73 @@ import i18Obj from './translate.js';
 const allText = document.querySelectorAll("[data-i18]");
 const readLanguage = document.querySelectorAll('input[name="lang"]');
 
+function setLanguage() {
+    if(!localStorage.getItem('language')){
+        localStorage.setItem('language', "en");
+        }
+    allText.forEach((n) => {
+        if (n.placeholder) {
+            n.placeholder = i18Obj[localStorage.getItem('language')][n.dataset.i18];
+            } else 
+        n.textContent = i18Obj[localStorage.getItem('language')][n.dataset.i18]});
+}
+setLanguage();
 if (readLanguage) {
     readLanguage.forEach((elem) => {
-      elem.addEventListener("change", function(event) {
-        var item = event.target.value;
-        allText.forEach((n) => {
-            if (n.placeholder) {
-                n.placeholder = i18Obj[item][n.dataset.i18];
-                } else 
-            n.textContent = i18Obj[item][n.dataset.i18]});
+        if (elem.value === localStorage.getItem('language')) {
+            elem.checked = true;
+        }
+        elem.addEventListener("change", function(event) {
+        localStorage.setItem('language', `${event.target.value}`);
+        setLanguage(localStorage.getItem('language'));
       });
     });
   }
 
 
-// function change theme
+// functions set and change theme
 
+const clickTheme = document.querySelector('.theme');
+const logoFooter = document.querySelectorAll('.footer_logo');
 
-
-(function() {
-    const clickTheme = document.querySelector('.theme');
-    const logoFooter = document.querySelectorAll('.footer_logo');
-    let a;
-    function toggleMe(){
-      return () => a = !a;
+function setTheme() {
+    if(!localStorage.getItem('theme')){
+    localStorage.setItem('theme', "dark");
     }
-    function changeTheme (event) {
+    if (localStorage.getItem('theme') === "light") {
+        clickTheme.classList.remove('theme-dark');
+        clickTheme.classList.add('theme-light');
+        document.documentElement.style.setProperty('--body-color', '#fff');
+        document.documentElement.style.setProperty('--text-color', '#000');
+        document.documentElement.style.setProperty('--hover-color', '#000');
+        logoFooter.forEach((el) => {
+            el.classList.remove('footer_logo_dark');
+            el.classList.add('footer_logo_light')});
+
+    } else {
+        clickTheme.classList.remove('theme-light');
+        clickTheme.classList.add('theme-dark');
+        document.documentElement.style.setProperty('--body-color', ""); 
+        document.documentElement.style.setProperty('--text-color', ""); 
+        document.documentElement.style.setProperty('--hover-color', "");
+        logoFooter.forEach((el) => {
+            el.classList.add('footer_logo_dark');
+            el.classList.remove('footer_logo_light')});
+    }
+}
+setTheme();
+
+function changeTheme (event) {
         if (event.target.classList.contains ('theme')){
-            clickTheme.classList.toggle('theme-light');
-            clickTheme.classList.toggle('theme-dark');
-            logoFooter.forEach((el) => {
-                el.classList.toggle('footer_logo_dark');
-                el.classList.toggle('footer_logo_light')});
-            
-            const b = toggleMe();
-            if (b()) {
-            document.documentElement.style.setProperty('--body-color', '#fff');
-            document.documentElement.style.setProperty('--text-color', '#000');
-            document.documentElement.style.setProperty('--hover-color', '#000');
-            } else {
-               document.documentElement.style.setProperty('--body-color', ""); 
-               document.documentElement.style.setProperty('--text-color', ""); 
-               document.documentElement.style.setProperty('--hover-color', ""); 
-            }
+            if (localStorage.getItem('theme') === "light") {
+                localStorage.setItem('theme', "dark");
+            } else if( localStorage.getItem('theme') === "dark"){
+                localStorage.setItem('theme', "light")};
+        setTheme();
         };
-    } 
-    clickTheme.addEventListener('click', changeTheme);
+} 
+clickTheme.addEventListener('click', changeTheme);
 
-
-}());
 
 // function for Burger menu 
 
@@ -225,20 +243,3 @@ function preloadImages(...season) {
   }
 preloadImages('summer','winter', 'spring');
 
-console.log(`
-Ваша отметка - 65 балла(ов)
-Вёрстка +10
-вёрстка видеоплеера: есть само видео, в панели управления есть кнопка Play/Pause, прогресс-бар, кнопка Volume/Mute, регулятор громкости звука +5
-в футере приложения есть ссылка на гитхаб автора приложения, год создания приложения, логотип курса со ссылкой на курс +5
-Кнопка Play/Pause на панели управления +10
-при клике по кнопке Play/Pause запускается или останавливается проигрывание видео +5
-внешний вид и функционал кнопки изменяется в зависимости от того, проигрывается ли видео в данный момент +5
-Прогресс-бар отображает прогресс проигрывания видео. При перемещении ползунка прогресс-бара вручную меняется текущее время проигрывания видео. Разный цвет прогресс-бара до и после ползунка +10
-При перемещении ползунка регулятора громкости звука можно сделать звук громче или тише. Разный цвет регулятора громкости звука до и после ползунка +10
-При клике по кнопке Volume/Mute можно включить или отключить звук. Одновременно с включением/выключением звука меняется внешний вид кнопки. Также внешний вид кнопки меняется, если звук включают или выключают перетягиванием регулятора громкости звука от нуля или до нуля +10
-Кнопка Play/Pause в центре видео +10
-есть кнопка Play/Pause в центре видео при клике по которой запускается видео и отображается панель управления +5
-когда видео проигрывается, кнопка Play/Pause в центре видео скрывается, когда видео останавливается, кнопка снова отображается +5
-Добавлено возможность полноэкранного просмотра — 5 балл(а)
-
-`);
