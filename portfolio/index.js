@@ -138,7 +138,7 @@ if (event.target.classList.contains('button_solid')) {
   circle.classList.add('circle');
   circle.style.top = buttonTop + 'px';
   circle.style.left =  buttonLeft + 'px';
-  
+
   this.appendChild(circle)
 
   setTimeout(() => circle.remove(), 750)
@@ -181,7 +181,8 @@ video.addEventListener('click', togglePlay);
 
 function videoVolume(n) {
     let v;
-    (n == 0) ? v = 0 : v = volumePlayer.value;
+    let lastVolume = volumePlayer.value;
+    (n === false) ?   v = 0 : v = lastVolume;
     video.volume = v;
     volumePlayer.style.background = "linear-gradient(to right, #bdae82 0%, #bdae82  " +v*100+ "%, #fff 0%, #fff 100%)";
     if (v<0.01) {
@@ -191,9 +192,14 @@ function videoVolume(n) {
     }
 }
 
-
 volumePlayer.addEventListener ('change', videoVolume);
-offVolume.addEventListener ('click', function() {videoVolume (0)})
+offVolume.addEventListener ('click', function() {
+    if (offVolume.textContent === "🕨") {
+        videoVolume (true)
+    } else if (offVolume.textContent === "🕪") {
+        videoVolume (false)
+    }
+})
 
 function fullScreen () {
         console.dir(video);
@@ -217,9 +223,7 @@ function timer() {
     
 }
 
-
 video.addEventListener ('timeupdate', timer)
-
 
 function progressVideo () {
     video.currentTime = (progressFull.value * video.duration)/100;
