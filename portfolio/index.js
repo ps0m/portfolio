@@ -130,24 +130,18 @@ const button = document.querySelectorAll('.button_solid');
 
 button.forEach((el) => el.addEventListener('click', e));
 function e (event) {
-if (event.target.classList.contains ('button_solid')) { 
-  const x = e.clientX
-  const y = e.clientY
+if (event.target.classList.contains('button_solid')) { 
+  const buttonTop = event.offsetY;
+  const buttonLeft = event.offsetX;
 
-  const buttonTop = e.offsetTop
-  const buttonLeft = e.offsetLeft
-
-  const xInside = x - buttonLeft
-  const yInside = y - buttonTop
-
-  const circle = document.createElement('span')
-  circle.classList.add('circle')
-  circle.style.top = yInside + 'px'
-  circle.style.left = xInside + 'px'
-
+  const circle = document.createElement('span');
+  circle.classList.add('circle');
+  circle.style.top = buttonTop + 'px';
+  circle.style.left =  buttonLeft + 'px';
+  
   this.appendChild(circle)
 
-  setTimeout(() => circle.remove(), 500)
+  setTimeout(() => circle.remove(), 750)
 }};
 
 // Video Player
